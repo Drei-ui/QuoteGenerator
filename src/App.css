@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap');
+
+#root, html, body{
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.advice{
+    height: 100%;
+    background: url(../src/images/adviceGenerator_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.adviceCard{
+    background-color: whitesmoke;
+    width: 40%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 15px 18px;
+}
+.adviceHeading{
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-family: "Stardos Stencil", system-ui;           
+}
+.giveAdvice {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 200px;
+    width: 210px;
+    opacity: 1;
+    background-color: #164ca7;
+    border: 1px solid #164ca7;
+  }
+    
+  .giveAdvice span {
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    font-family: "Stardos Stencil", system-ui; 
+  }
+    
+  .giveAdvice:hover {
+    animation: rotate 0.7s ease-in-out both;
+  }
+    
+  .giveAdvice:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+    
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+    
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }  
+  
+  @media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 30%;
+    }
+  }
